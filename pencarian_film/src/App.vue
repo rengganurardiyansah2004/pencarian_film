@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import './assets/style.css';
+import './assets/Style.css';
 
 export default {
   data() {
@@ -123,6 +123,7 @@ export default {
         }
         const data = await response.json();
         if (data.Search) {
+          // Ambil data film dan poster
           const newMovies = data.Search.map(movie => ({
             Title: movie.Title,
             Poster: movie.Poster,
@@ -138,4 +139,5 @@ export default {
     },
   },
 };
+
 </script>
